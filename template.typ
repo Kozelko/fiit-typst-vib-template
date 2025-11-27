@@ -127,5 +127,15 @@
     date: date,
   )
 
+  // Table of contents with Roman numerals
+  set page(numbering: "i", number-align: center)
+  counter(page).update(1)
+  outline(title: "Contents", indent: auto, depth: 3)
+  pagebreak()
+
+  // Reset to Arabic numerals starting from 1 for main content
+  set page(numbering: "1", number-align: center)
+  counter(page).update(1)
+
   body
 }
