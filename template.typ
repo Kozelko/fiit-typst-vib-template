@@ -82,13 +82,13 @@
   body,
 ) = {
   // Document setup
-  set page(paper: "a4", margin: (x: 2.5cm, y: 2.5cm))
-  set text(font: "New Computer Modern", size: 12pt, lang: "en")
+  set page(paper: "a4", margin: 3cm)
+  set text(font: "New Computer Modern", size: 1.1em, lang: "en")
   set par(
     justify: true,
-    leading: 0.65em, // medzera medzi riadkami v rámci odseku
-    spacing: 1.2em, // medzera medzi odsekmi (paragrafmi)
-    first-line-indent: 0pt,
+    leading: 1.3em,
+    spacing: 1.5em,
+    first-line-indent: 1em,
   )
 
   // Heading numbering
@@ -98,17 +98,17 @@
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
     set text(size: 16pt, weight: "bold")
-    block(above: 1em, below: 1em, it)
+    block(above: 2em, below: 2em, it)
   }
 
   show heading.where(level: 2): it => {
     set text(size: 14pt, weight: "bold")
-    block(above: 1em, below: 1em, it)
+    block(above: 1.5em, below: 1.5em, it)
   }
 
   show heading.where(level: 3): it => {
     set text(size: 13pt, weight: "bold")
-    block(above: 1em, below: 1em, it)
+    block(above: 1.2em, below: 1.2em, it)
   }
 
   // List spacing
